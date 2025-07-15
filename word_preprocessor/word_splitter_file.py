@@ -9,8 +9,8 @@ class WordSplitterClass(object):
 
     def __init__(self):
         self.logger = NsLog("log")
-        self.path_data = "/data/"
-        self.name_brand_file = "All_Brand.txt"
+        self.path_data = "/content/files/word_preprocessor/data/"
+        self.name_brand_file = "allbrand.txt"
         self.dictionary_en = enchant.DictWithPWL("en_US", "{0}{1}".format(self.path_data, self.name_brand_file))
         #self.__file_capitalize(self.path_data, self.name_brand_file)
 
