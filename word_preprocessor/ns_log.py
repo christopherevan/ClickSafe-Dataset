@@ -8,7 +8,7 @@ from logging.handlers import TimedRotatingFileHandler
 def NsLog(modulename):
 
     logFormatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-    logFileName = "/log/{}.log".format(modulename)
+    logFileName = "log/{}.log".format(modulename)
     logHandler = TimedRotatingFileHandler(logFileName, when="midnight")
     logHandler.setFormatter(logFormatter)
     streamHandler = logging.StreamHandler()
