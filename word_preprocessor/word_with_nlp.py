@@ -17,7 +17,7 @@ class nlp_class:
 
     def __init__(self):
         self.logger = NsLog("log")
-        self.path_data = "../data/"
+        self.path_data = "/data/"
         self.name_keywords = "keywords.txt"
         self.name_brand_file = "allbrand.txt"
         self.name_random_model = "gib_model.pki"
