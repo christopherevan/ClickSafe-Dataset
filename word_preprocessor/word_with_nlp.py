@@ -7,7 +7,6 @@ import pickle
 import numpy as np
 import editdistance
 import gib_detect_train
-import os
 
 from traceback import format_exc
 
@@ -18,16 +17,17 @@ class nlp_class:
 
     def __init__(self):
         self.logger = NsLog("log")
-        self.name_keywords = "/content/files/word_preprocessor/data/keywords.txt"
-        self.name_brand_file = "/content/files/word_preprocessor/data/allbrand.txt"
+        self.path_data = "data"
+        self.name_keywords = "keywords.txt"
+        self.name_brand_file = "allbrand.txt"
         self.name_random_model = "/content/files/word_preprocessor/gib_model.pki"
 
         model_data = pickle.load(open(self.name_random_model, 'rb'))
         self.model_mat = model_data['mat']
         self.threshold = model_data['thresh']
 
-        self.allbrand = self.__txt_to_list(open("{0}{1}".format(self.name_brand_file), "r"))
-        self.keywords = self.__txt_to_list(open("{0}{1}".format(self.name_keywords), "r"))
+        self.allbrand = self.__txt_to_list(open("{0}{1}".format(self.path_data, self.name_brand_file), "r"))
+        self.keywords = self.__txt_to_list(open("{0}{1}".format(self.path_data, self.name_keywords), "r"))
 
 
     def __txt_to_list(self, txt_object):
