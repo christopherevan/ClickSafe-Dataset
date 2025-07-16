@@ -16,8 +16,6 @@ from ns_log import NsLog
 class url_rules:
     def __init__(self):
 
-        print("initializing")
-
         self.logger = NsLog("log")
         self.path_data = "/content/files/word_preprocessor/data/"
         self.name_brand_file = "allbrand.txt"
