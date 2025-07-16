@@ -21,7 +21,7 @@ class url_rules:
         self.logger = NsLog("log")
         self.path_data = "/content/files/word_preprocessor/data/"
         self.name_brand_file = "allbrand.txt"
-        self.path_alexa_files = "/content/files/word_preprocessor/alexa"
+        self.path_alexa_files = "/content/files/word_preprocessor/alexa/"
 
         self.nlp_manager = nlp_class()
         # self.pp = pprint.PrettyPrinter(indent=4)
